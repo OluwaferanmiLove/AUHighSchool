@@ -95,6 +95,12 @@ function TeacherHome({ navigation }) {
             />
           ))}
         </View>
+        {allSubjects.length < 1 && (
+          <View style={[styles.sectionTitleContainer, {alignItems: 'center', flex: 1, height: hp(800)}]}>
+            <Text style={[styles.sectionTitle, {fontWeight: 'normal', fontSize: wp(18)}]}>You have no subject assign to you yet</Text>
+            <Text style={[styles.sectionTitle, {fontWeight: 'normal', fontSize: wp(18)}]}>Contact your admin to asign subject for you</Text>
+          </View>
+        )}
       </ScrollView>
     </SafeAreaView>
   )
